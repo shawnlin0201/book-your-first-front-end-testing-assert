@@ -1,0 +1,1 @@
+expect(["橘橘", "黑黑"]).toContain("橘橘"); // passed

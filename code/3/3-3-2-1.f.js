@@ -1,0 +1,1 @@
+expect(null).toBeNull() // passed

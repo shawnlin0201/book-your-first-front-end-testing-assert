@@ -1,0 +1,1 @@
+npm install -D eslint-plugin-vitest-globals

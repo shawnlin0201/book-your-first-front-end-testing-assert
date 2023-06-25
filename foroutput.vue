@@ -1,7 +1,3 @@
 <template>
-  <BaseButton>確認</BaseButton>
+  <p data-test="target" ref="target">想斷言的目標</p>
 </template>
-
-<script setup>
-import BaseButton from "./4-1-a.vue";
-</script>

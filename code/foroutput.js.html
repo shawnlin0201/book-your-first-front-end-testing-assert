@@ -5,39 +5,16 @@
 <link rel="stylesheet" type="text/css" href="highlight.css">
 </head>
 <body class="hl">
-<pre class="hl"><span class="hl lin">01 </span><span class="hl kwa">import</span> <span class="hl opt">{</span> mount <span class="hl opt">}</span> <span class="hl kwa">from</span> <span class="hl sng">&#39;&#64;vue/test-utils&#39;</span>
-<span class="hl lin">02 </span><span class="hl kwa">import</span> <span class="hl opt">{</span> defineComponent <span class="hl opt">}</span> <span class="hl kwa">from</span> <span class="hl sng">&#39;vue&#39;</span>
-<span class="hl lin">03 </span>
-<span class="hl lin">04 </span><span class="hl kwa">const</span> BaseButton <span class="hl opt">=</span> <span class="hl kwd">defineComponent</span><span class="hl opt">({</span>
-<span class="hl lin">05 </span>  <span class="hl kwd">name</span><span class="hl opt">:</span> <span class="hl sng">&#39;BaseButton&#39;</span><span class="hl opt">,</span>
-<span class="hl lin">06 </span>  <span class="hl kwd">template</span><span class="hl opt">:</span> <span class="hl sng">`</span>
-<span class="hl lin">07 </span><span class="hl sng">    &lt;button&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/button&gt;</span>
-<span class="hl lin">08 </span><span class="hl sng">  `</span>
-<span class="hl lin">09 </span><span class="hl opt">})</span>
-<span class="hl lin">10 </span>
-<span class="hl lin">11 </span><span class="hl kwa">const</span> BaseModal <span class="hl opt">=</span> <span class="hl kwd">defineComponent</span><span class="hl opt">({</span>
-<span class="hl lin">12 </span>  <span class="hl kwd">name</span><span class="hl opt">:</span> <span class="hl sng">&#39;BaseModal&#39;</span><span class="hl opt">,</span>
-<span class="hl lin">13 </span>  <span class="hl kwd">components</span><span class="hl opt">: {</span>
-<span class="hl lin">14 </span>    BaseButton
-<span class="hl lin">15 </span>  <span class="hl opt">},</span>
-<span class="hl lin">16 </span>  <span class="hl kwd">template</span><span class="hl opt">:</span> <span class="hl sng">`</span>
-<span class="hl lin">17 </span><span class="hl sng">        &lt;div&gt;</span>
-<span class="hl lin">18 </span><span class="hl sng">            &lt;BaseButton&gt;確認&lt;/BaseButton&gt;</span>
-<span class="hl lin">19 </span><span class="hl sng">        &lt;/div&gt;</span>
-<span class="hl lin">20 </span><span class="hl sng">    `</span>
-<span class="hl lin">21 </span><span class="hl opt">})</span>
-<span class="hl lin">22 </span>
-<span class="hl lin">23 </span><span class="hl kwd">it</span><span class="hl opt">(</span><span class="hl sng">&#39;使用 Component Name 載入&#39;</span><span class="hl opt">, () =&gt; {</span>
-<span class="hl lin">24 </span>  <span class="hl kwa">const</span> wrapper <span class="hl opt">=</span> <span class="hl kwd">mount</span><span class="hl opt">(</span>BaseModal<span class="hl opt">)</span>
-<span class="hl lin">25 </span>  console<span class="hl opt">.</span><span class="hl kwd">log</span><span class="hl opt">(</span>wrapper<span class="hl opt">.</span><span class="hl kwd">findComponent</span><span class="hl opt">({</span> <span class="hl kwd">name</span><span class="hl opt">:</span> <span class="hl sng">&#39;BaseButton&#39;</span> <span class="hl opt">}).</span><span class="hl kwd">html</span><span class="hl opt">())</span>
-<span class="hl lin">26 </span>  <span class="hl slc">// &lt;BaseButton&gt;確認&lt;/BaseButton&gt;</span>
-<span class="hl lin">27 </span><span class="hl opt">})</span>
-<span class="hl lin">28 </span>
-<span class="hl lin">29 </span><span class="hl kwd">it</span><span class="hl opt">(</span><span class="hl sng">&#39;直接引入元件&#39;</span><span class="hl opt">, () =&gt; {</span>
-<span class="hl lin">30 </span>  <span class="hl kwa">const</span> wrapper <span class="hl opt">=</span> <span class="hl kwd">mount</span><span class="hl opt">(</span>BaseModal<span class="hl opt">)</span>
-<span class="hl lin">31 </span>  console<span class="hl opt">.</span><span class="hl kwd">log</span><span class="hl opt">(</span>wrapper<span class="hl opt">.</span><span class="hl kwd">findComponent</span><span class="hl opt">(</span>BaseButton<span class="hl opt">).</span><span class="hl kwd">html</span><span class="hl opt">())</span>
-<span class="hl lin">32 </span>  <span class="hl slc">// &lt;BaseButton&gt;確認&lt;/BaseButton&gt;</span>
-<span class="hl lin">33 </span><span class="hl opt">})</span>
+<pre class="hl"><span class="hl lin">01 </span><span class="hl kwa">const</span> formatDate <span class="hl opt">= (</span>date<span class="hl opt">) =&gt; {</span>
+<span class="hl lin">02 </span>  <span class="hl kwa">var</span> newDate <span class="hl opt">=</span> <span class="hl kwa">new</span> <span class="hl kwd">Date</span><span class="hl opt">(</span>date<span class="hl opt">)</span>
+<span class="hl lin">03 </span>  <span class="hl kwa">var</span> offset <span class="hl opt">=</span> <span class="hl kwa">new</span> <span class="hl kwd">Date</span><span class="hl opt">().</span><span class="hl kwd">getTimezoneOffset</span><span class="hl opt">()</span>
+<span class="hl lin">04 </span>  newDate <span class="hl opt">=</span> <span class="hl kwa">new</span> <span class="hl kwd">Date</span><span class="hl opt">(</span>newDate<span class="hl opt">.</span><span class="hl kwd">getTime</span><span class="hl opt">() -</span> offset <span class="hl opt">*</span> <span class="hl num">60</span> <span class="hl opt">*</span> <span class="hl num">1000</span><span class="hl opt">)</span>
+<span class="hl lin">05 </span>
+<span class="hl lin">06 </span>  <span class="hl kwa">return</span> newDate<span class="hl opt">.</span><span class="hl kwd">toISOString</span><span class="hl opt">().</span><span class="hl kwd">split</span><span class="hl opt">(</span><span class="hl sng">&#39;T&#39;</span><span class="hl opt">)[</span><span class="hl num">0</span><span class="hl opt">]</span>
+<span class="hl lin">07 </span><span class="hl opt">}</span>
+<span class="hl lin">08 </span><span class="hl kwd">it</span><span class="hl opt">(</span><span class="hl sng">&#39;formatDate 應該針對日期輸出對應的格式&#39;</span><span class="hl opt">,</span> <span class="hl kwd">async</span> <span class="hl opt">() =&gt; {</span>
+<span class="hl lin">09 </span>  <span class="hl kwd">expect</span><span class="hl opt">(</span><span class="hl kwd">formatDate</span><span class="hl opt">(</span><span class="hl sng">&#39;2023/07/22&#39;</span><span class="hl opt">)).</span><span class="hl kwd">toBe</span><span class="hl opt">(</span><span class="hl sng">&#39;2023-07-22&#39;</span><span class="hl opt">)</span>
+<span class="hl lin">10 </span><span class="hl opt">})</span>
 </pre>
 </body>
 </html>

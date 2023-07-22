@@ -6,8 +6,17 @@
 </head>
 <body class="hl">
 <pre class="hl"><span class="hl lin">01 </span><span class="hl kwa">&lt;template&gt;</span>
-<span class="hl lin">02 </span>  <span class="hl kwa">&lt;p</span> <span class="hl kwb">data-test</span>=<span class="hl sng">&quot;target&quot;</span> <span class="hl kwb">ref</span>=<span class="hl sng">&quot;target&quot;</span><span class="hl kwa">&gt;</span>想斷言的目標<span class="hl kwa">&lt;/p&gt;</span>
+<span class="hl lin">02 </span>  <span class="hl kwa">&lt;div&gt;</span>{{ text }}, {{ text2 }}!<span class="hl kwa">&lt;/div&gt;</span>
 <span class="hl lin">03 </span><span class="hl kwa">&lt;/template&gt;</span>
+<span class="hl lin">04 </span><span class="hl kwa">&lt;script</span> setup<span class="hl kwa">&gt;</span>
+<span class="hl lin">05 </span>const vFocus = {
+<span class="hl lin">06 </span>  mounted: (el) =<span class="hl kwa">&gt;</span> el.focus()
+<span class="hl lin">07 </span>}
+<span class="hl lin">08 </span><span class="hl kwa">&lt;/script&gt;</span>
+<span class="hl lin">09 </span>
+<span class="hl lin">10 </span><span class="hl kwa">&lt;template&gt;</span>
+<span class="hl lin">11 </span>  <span class="hl kwa">&lt;input</span> v-focus <span class="hl kwb">type</span>=<span class="hl sng">&quot;text&quot;</span> <span class="hl kwb">placeholder</span>=<span class="hl sng">&quot;請填入......&quot;</span> <span class="hl kwa">/&gt;</span>
+<span class="hl lin">12 </span><span class="hl kwa">&lt;/template&gt;</span>
 </pre>
 </body>
 </html>

@@ -6,6 +6,6 @@ const formatDate = (date) => {
   return newDate.toISOString().split('T')[0]
 }
 it('formatDate 應該針對日期輸出對應的格式', async () => {
-  const dummyDate = '2023/07/22'
-  expect(formatDate(dummyDate)).toBe('2023-07-22')
+  const date = new Date(2023, 6, 22)
+  expect(formatDate(date)).toBe('2023-07-22')
 })

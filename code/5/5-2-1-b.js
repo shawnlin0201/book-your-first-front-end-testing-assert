@@ -1,10 +1,21 @@
-const add = (x, y) => x + y
 
-describe('斷言目標直接從受測物的返回資訊上取得', () => {
-  it('add 1 + 2 should be 3', () => {
-    const actual = add(1, 2) // 本身會返回 3
-    const expected = 3
-
-    expect(actual).toBe(expected) // passed
+it('傳入 isShow 為 true 時，應該要能顯示元件', async () => {
+  const wrapper = mount(component, {
+    props: {
+      isShow: true,
+      ...dummyProps
+    }
   })
+  const modal = await wrapper.find('[data-test="modal"]')
+  expect(modal.isVisible()).toBe(true)
+})
+it('傳入 isShow 為 false 時，應該要能顯示元件', async () => {
+  const wrapper = mount(component, {
+    props: {
+      isShow: false,
+      ...dummyProps
+    }
+  })
+  const modal = await wrapper.find('[data-test="modal"]')
+  expect(modal.isVisible()).toBe(false)
 })

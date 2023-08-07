@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="ME4XLKuYvELTRSPfp1h0" name="第1頁">
-        <mxGraphModel dx="875" dy="461" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="750" pageHeight="600" background="none" math="0" shadow="0">
+        <mxGraphModel dx="635" dy="461" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="750" pageHeight="600" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -34,7 +34,7 @@
                 <mxCell id="25" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;櫃檯人員&lt;br&gt;&lt;/span&gt;（受測物）" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=6;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="320" y="120" width="110" height="280" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" value="" style="endArrow=classic;html=1;strokeWidth=6;fontSize=16;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.015;entryY=0.111;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=1 1;" parent="1" source="20" target="25" edge="1">
+                <mxCell id="29" value="" style="endArrow=classic;html=1;strokeWidth=6;fontSize=16;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.015;entryY=0.111;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="20" target="25" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="150" y="190" as="sourcePoint"/>
                         <mxPoint x="150" y="240" as="targetPoint"/>
